@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Collect apps from .desktop files (including Flatpak/Snap)
+APP_DIRS=(
+  /usr/share/applications
+  /var/lib/flatpak/exports/share/applications
+  "$HOME/.local/share/flatpak/exports/share/applications"
+  /var/lib/snapd/desktop/applications
+)
+
+# Extract and show app names
+apps=$(find "${APP_DIRS[@]}" -name "*.desktop" 2>/dev/null | \
+  xargs grep -h '^Name=' | \
+  cut -d= -f2 | \
+  sort -u)
+
+# Collect flatpak app IDs
+flatpak_apps=$(flatpak list --app --columns=application 2>/dev/null)
+
+# Merge and prompt
+choice=$( (echo "$apps"; echo "$flatpak_apps") | sort -u | dmenu -i -p "Launch:")
+
+# Try to run based on what was chosen
+if echo "$flatpak_apps" | grep -Fxq "$choice"; then
+  flatpak run "$choice" &
+elif desktop_file=$(find "${APP_DIRS[@]}" -name "*.desktop" -exec grep -l "Name=$choice" {} + | head -n 1); then
+  exec_cmd=$(grep '^Exec=' "$desktop_file" | head -n1 | cut -d= -f2 | cut -d' ' -f1)
+  nohup "$exec_cmd" >/dev/null 2>&1 &
+else
+  echo "Command not found"
+fi
+
