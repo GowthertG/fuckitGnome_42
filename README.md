@@ -12,7 +12,7 @@ Run a tiling window manager inside your GNOME session at 42 — no root, no perm
 ## 🚀 Quickstart
 
 ```bash
-git clone https://github.com/<your-username>/fuckitGnome_42.git
+git clone https://github.com/GowthertG/fuckitGnome_42.git
 cd fuckitGnome_42
 bash install.sh
 fuckgnome
