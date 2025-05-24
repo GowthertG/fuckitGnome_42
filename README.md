@@ -59,8 +59,6 @@ To fix this:
 
 ---
 
-Let me know if you want to display this automatically when they run `fuckgnome` the first time too.
-
 ## 🖼 Wallpaper Support
 
 * Uses `xsetroot -bitmap wallpapers/wall.xbm`
