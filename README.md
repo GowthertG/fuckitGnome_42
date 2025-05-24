@@ -35,8 +35,6 @@ fuckgnome
 | Close window       | Mod + Shift + c                        |
 | Layout change      | Mod + t / f / m                        |
 
-Absolutely — here’s a version that **stands out clearly** and fits your README style:
-
 ---
 
 ## ⚠️ Important Tips for Using fuckitGnome\_42
