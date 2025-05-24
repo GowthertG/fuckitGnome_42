@@ -35,6 +35,34 @@ fuckgnome
 | Close window       | Mod + Shift + c                        |
 | Layout change      | Mod + t / f / m                        |
 
+Absolutely — here’s a version that **stands out clearly** and fits your README style:
+
+---
+
+## ⚠️ Important Tips for Using fuckitGnome\_42
+
+🖱️ **Entering the DWM session:**
+
+> After launching `fuckgnome`, you must **click inside the Xephyr window while holding `Ctrl + Shift`**
+> This will grab keyboard and mouse input so you can control DWM.
+
+If you skip this, GNOME will still capture your keys and mouse!
+
+---
+
+🧱 **Launching apps inside DWM:**
+
+> If an app (like Chrome, VSCode, etc.) is **already running in GNOME**, it may not appear in the DWM session.
+
+To fix this:
+
+* ❌ Close the app in GNOME
+* ✅ Then launch it inside DWM using `dmenu` or a shortcut
+
+---
+
+Let me know if you want to display this automatically when they run `fuckgnome` the first time too.
+
 ## 🖼 Wallpaper Support
 
 * Uses `xsetroot -bitmap wallpapers/wall.xbm`
