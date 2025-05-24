@@ -44,4 +44,4 @@ fuckgnome
 ## 📎 Notes
 
 Built by and for 42 students.
-Fork it, improve it, or throw it in a pipe and test your X11-fu.
+Fork it, improve it / If you'd like to contribute, feel free to open a pull request..
