@@ -18,7 +18,7 @@ cd fuckitGnome_42
 bash install.sh
 fuckgnome
 ```
-**ps : if its ```fuckgnome``` not found just run ```./scripts/launch.sh```**
+**⚠️ ps : if its ```fuckgnome``` not found just run ```./scripts/launch.sh```**
 
 ## 🧠 Keybindings
 
