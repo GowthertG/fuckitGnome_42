@@ -1,7 +1,6 @@
 # 💻 fuckitGnome\_42
 
 Run a tiling window manager inside your GNOME session at 42 — no root, no permissions, just DWM.
-
 ## 🔧 What It Does
 
 * Builds and installs `dwm` and `dmenu` locally in `~/.local`
@@ -19,6 +18,7 @@ cd fuckitGnome_42
 bash install.sh
 fuckgnome
 ```
+**ps : if its ```fuckgnome``` not found just run ```./scripts/launch.sh```**
 
 ## 🧠 Keybindings
 
